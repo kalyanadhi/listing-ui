@@ -1,0 +1,17 @@
+<header class="text-dark bg-light p-sm-4 p-4">
+    <div class="container">
+        <div class="row justify-content-left align-items-left">
+            <div class="col-md-3 col-xl-3"><img /></div>
+            <div class="col-md-6 col-xl-6 align-items-center align-content-center">
+                <div class="input-group input-box-shadow">
+                    <input type="text" name="keyword" [formControl]="searchControl" class="form-control"
+                        placeholder="Search by product name" aria-label="Keyword" aria-describedby="basic-addon2"
+                        (keyup.enter)="navigateToSearch()">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
