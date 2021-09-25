@@ -1,15 +1,7 @@
-<!-- <div class="container">
-    <div class="row">
-        <li *ngFor="let item of searchResultItem;">
-            {{item.title[0]}}
-        </li>
-    </div>
-</div> -->
-
 <div class="container mt-5 mb-5">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
-            <div *ngFor="let item of searchResultItem;" class="row p-2 bg-white border rounded">
+            <div *ngFor="let item of searchResultItem;" class="row p-2 mb-4 bg-white border rounded">
                 <div class="col-md-3 mt-1">
                     <img class="img-fluid img-responsive rounded product-image" [src]="productImage(item.galleryURL)">
                 </div>
