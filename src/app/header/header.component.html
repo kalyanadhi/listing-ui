@@ -8,7 +8,7 @@
                         placeholder="Search by product name" aria-label="Keyword" aria-describedby="basic-addon2"
                         (keyup.enter)="navigateToSearch()">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">Search</button>
+                        <button class="btn btn-outline-secondary" (click)="navigateToSearch()" type="button">Search</button>
                     </div>
                 </div>
             </div>
