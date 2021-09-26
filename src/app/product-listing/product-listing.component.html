@@ -1,6 +1,20 @@
 <div class="container mt-5 mb-5">
-    <div class="d-flex justify-content-center row">
+    <div class="d-flex justify-content-center row gx-5">
+        <div class="col-md-2 border-right">
+            <p class="h4">Filter</p>
+            <form [formGroup]="searchFilterForm">
+                <!-- <input type="number" matInput placeholder="0" formControlName="minValue">
+                <input type="number" matInput placeholder="10000" formControlName="maxValue">
+                <button class="btn btn-primary btn-sm" type="submit">Go</button> -->
+                <div class="input-group">
+                    <input type="number" aria-label="minimum price" formControlName="minValue" class="form-control">
+                    <input type="number" aria-label="maximum price" formControlName="maxValue" class="form-control">
+                    <button (click)="valueRangeValidation()" class="input-group-text">Go</button>
+                  </div>
+            </form>
+        </div>
         <div class="col-md-10">
+            <h4>Total products {{searchResultCount}}</h4>
             <div *ngFor="let item of searchResultItem;" class="row p-2 mb-4 bg-white border rounded">
                 <div class="col-md-3 mt-1">
                     <img class="img-fluid img-responsive rounded product-image" [src]="productImage(item.galleryURL)">
@@ -86,6 +100,14 @@
                     <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
                 </div>
             </div>  -->
+        </div>
+    </div>
+
+    <!-- Overlay and spinner -->
+    <div id="overlay" *ngIf="loading">
+        <div class="w-100 mx-auto d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-primary" role="status">
+            </div>
         </div>
     </div>
 </div>
