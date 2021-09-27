@@ -95,4 +95,8 @@ export class ProductListingComponent implements OnInit {
     }
   }
 
+  getPrice(sellingStatus){
+    return sellingStatus[0].currentPrice[0]['__value__'];
+  }
+
 }
